@@ -1,13 +1,115 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #f4f6f8;
+  color: #1a1a1a;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  min-height: 100vh;
+  padding: 48px 16px 80px;
+}
+
+.App > h1 {
+  text-align: center;
+  margin: 0 0 28px;
+  font-size: 32px;
+}
+
+.Form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: flex-end;
+  max-width: 720px;
+  margin: 0 auto 28px;
+}
+
+.Form label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.Form input {
+  width: 220px;
+  padding: 10px 12px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.Form button,
+.Card--button button {
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.Form button {
+  background: #1b7f79;
+  color: white;
+  height: 40px;
+}
+
+.Form button:disabled {
+  background: #b7c4c3;
+  cursor: not-allowed;
+}
+
+.Card {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  max-width: 720px;
+  margin: 12px auto;
+  padding: 16px 18px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.08);
+}
+
+.Card--text {
+  text-align: left;
+}
+
+.Card--text h1 {
+  margin: 0 0 4px;
+  font-size: 18px;
+}
+
+.Card--text span {
+  color: #555;
+}
+
+.Card--button {
+  display: flex;
+  gap: 8px;
+}
+
+.Card--button__done {
+  background: #1b7f79;
+  color: white;
+}
+
+.Card--button__delete {
+  background: #fdecea;
+  color: #b42318;
+}
+
+.line-through {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.hide-button {
+  display: none;
 }

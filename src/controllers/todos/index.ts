@@ -38,10 +38,7 @@ const updateTodo = async (req: Request, res: Response): Promise<void> => {
             params: {id},
             body,
         } = req
-        const updateTodo: ITodo | null = await Todo.findByIdAndUpdate(
-            { _id: id},
-            body
-        )
+        const updateTodo: ITodo | null = await Todo.findByIdAndUpdate(id, body)
         const allTodos: ITodo[] = await Todo.find()
         res.status(200).json({
             message: "Todo updated",
